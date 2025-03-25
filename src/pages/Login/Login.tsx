@@ -4,7 +4,7 @@ const Login = () => {
     return (
         <div className="">
             <div className="md:w-[500px] p-8 py-10 bg-white mx-auto my-10 lg:w-[640px] rounded-[4px] 
-            rgba(0, 0, 0, .15)">
+            drop-shadow-2xl">
                 <div className="">
                     <h1 className="text-3xl font-medium text-center">Login</h1>
                 </div>
