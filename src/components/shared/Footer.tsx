@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 const Footer = () => {
     return (
         <div className="w-full bg-[#222326] min-h-[45vh] mt-8">
-            <div className='flex justify-evenly'>
+            <div className='flex justify-evenly flex-wrap'>
                 <div className='mt-6 py-5'>
                     <div className='flex space-x-2 items-center'>
                         <img src={logo} className='w-[39px] md:w-[45px] rounded-full' alt="bokknest" />
@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
                 <div className="">
                     <h1 className='text-2xl text-center font-medium text-white'>Quick Link</h1>
-                    <div>
+                    <div className='mt-6'>
                         <div className='flex space-x-16'>
                             <div className='flex flex-col'>
                                 <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Home</a>
@@ -43,7 +43,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <h1></h1>
+            <h1 className='text-gray-400 text-center mt-12 text-[17px]'>Copyright © <span className='text-[#fe3050]'>BookNest</span> | all rights reserved!</h1>
         </div>
     )
 }

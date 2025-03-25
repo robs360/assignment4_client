@@ -11,13 +11,14 @@ const Login = () => {
 
                 <form className="mt-6" action="">
                     <h1>Enter Your Email</h1>
-                    <input className="w-full border-[1px] border-gray-500 rounded-[3px] h-[40px]" type="text" />
+                    <input className="w-full border-[1px] border-gray-800 rounded-[3px] h-[40px]" type="text" />
                     <h1 className="mt-5">Enter Your Password</h1>
-                    <input className="w-full border-[1px] border-gray-500 rounded-[3px] h-[40px]" type="text" />
+                    <input className="w-full border-[1px] border-gray-800 rounded-[3px] h-[40px]" type="text" />
                     <button className="w-full text-white bg-[#fe3050]
                     mt-5 h-[40px] rounded-[4px] font-medium text-[18px] cursor-pointer">Login</button>
                     <NavLink className={'text-center'} to={'/signup'}>
-                      <h1 className="mt-2">Does Not Have An Account?</h1>
+                      <h1 className="mt-2">Does not have an account? 
+                        <span className="text-[#fe3050]"> Click Here</span></h1>
                     </NavLink>
                 </form>
             </div>
