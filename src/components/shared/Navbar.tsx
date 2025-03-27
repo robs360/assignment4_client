@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className='md:hidden justify-center mt-5 flex text-[16px] space-x-8'>
                 <NavLink to={''}>Home</NavLink>
                 <NavLink to={''}>About Us</NavLink>
-                <NavLink to={''}>All Book</NavLink>
+                <NavLink to={'/allproducts'}>All Book</NavLink>
                 <NavLink to={''}>Blog</NavLink>
             </div>
           
