@@ -18,9 +18,9 @@ const Home=()=>{
            <div className="mt-24">
                <h1 className="text-4xl font-medium py-3 text-center
                 border-b-2  border-t-2 border-gray-500 ">See Our Products</h1>
-                <div className="grid grid-cols-4 mt-6 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-6 gap-5">
                    {
-                      data.data.slice(0,8).map((item:any)=> <div key={item._id}  className="w-[300px] mx-auto p-3 py-5 border-[1px] border-gray-400 min-h-[400px]">
+                      data.data.slice(0,8).map((item:any)=> <div key={item._id}  className="w-[320px] md:w-[245px]  mx-auto p-2 py-5 border-[1px] border-gray-400 min-h-[400px]">
                                  <img src={item.image} className="w-[115px] mx-auto" alt="" />
                                  <div className="mt-4">
                                      <h1 className="text-center text-[17px]
@@ -34,10 +34,10 @@ const Home=()=>{
                                         <FaStar className="text-xl text-orange-300"></FaStar>
                                         <FaStar className="text-xl text-orange-300"></FaStar>
                                       </div>
+                                     <NavLink to={`/details/${item._id}`}> <button className="w-full text-[17px] mt-5 font-medium text-white
+                                      bg-[#fe3050] h-[35px] cursor-pointer">Details</button></NavLink>
                                       <button className="w-full text-[17px] mt-5 font-medium text-white
-                                      bg-[#fe3050] h-[35px] rounded-[4px] cursor-pointer">Details</button>
-                                      <button className="w-full text-[17px] mt-5 font-medium text-white
-                                      bg-gray-700 h-[35px] rounded-[4px] cursor-pointer">Add To Cart</button>
+                                      bg-gray-700 h-[35px] cursor-pointer">Add To Cart</button>
                                  </div>
                         </div>)
                    }
