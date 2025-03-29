@@ -16,7 +16,7 @@ const Navbar = () => {
                 <div className='hidden md:flex text-[16px] space-x-5'>
                     <NavLink to={''}>Home</NavLink>
                     
-                    <NavLink to={''}>All Book</NavLink>
+                    <NavLink to={'/allproducts'}>All Book</NavLink>
                     <NavLink to={''}>Blog</NavLink>
                 </div>
                 <div className='flex space-x-3 items-center'>
@@ -34,6 +34,7 @@ const Navbar = () => {
                 <NavLink to={''}>Home</NavLink>
                 <NavLink to={''}>About Us</NavLink>
                 <NavLink to={'/allproducts'}>All Book</NavLink>
+           
                 <NavLink to={''}>Blog</NavLink>
             </div>
           

@@ -1,6 +1,7 @@
 import { useLoginMutation } from "@/Redux/api/baseApi"
 import { setUser } from "@/Redux/featurs/auth/authSlice"
 import { useAppDispatch } from "@/Redux/hooks"
+import verifyToken from "@/utils/verifyToken"
 import { NavLink } from "react-router-dom"
 
 const Login = () => {
@@ -14,8 +15,9 @@ const Login = () => {
         const password = form.pass.value;
 
         const res = await login({ email, password }).unwrap()
-        console.log(res)
-        dispatch(setUser({ user: {}, token: res.data.accessToken }))
+        const user=verifyToken(res.data.accessToken)
+        
+        dispatch(setUser({ user:user, token: res.data.accessToken }))
     }
     return (
         <div className="">

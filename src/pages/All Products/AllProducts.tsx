@@ -12,6 +12,23 @@ const AllProducts = () => {
 
             <Marquee className="my-8 text-center p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, corporis!
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. A aspernatur soluta eius quasi accusantium illo fuga eligendi excepturi placeat porro.</Marquee>
+                <div className="flex justify-center">
+                   <div>
+                   <input type="text" className="p-3 rounded-l-full h-[44px] w-[266px] md:w-[365px] border-2 lg:w-[560px]" name="" id="" />
+                   <button className="bg-gray-700 text-white h-[43px] px-3 rounded-r-full">Search</button>
+                   </div>
+                </div>
+
+                <div className="my-8 mb-16">
+                       <h1 className="text-[17px] font-medium text-center mb-5">See With Category</h1>
+                       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 p-3 justify-center">
+                           <button className="p-2 border-2 font-medium cursor-pointer rounded-[6px]">Drama</button>
+                           <button className="p-2 border-2 font-medium cursor-pointer rounded-[6px]">Poetry</button>
+                           <button className="p-2 border-2 font-medium cursor-pointer rounded-[6px]">Science</button>
+                           <button className="p-2 border-2 font-medium cursor-pointer rounded-[6px]">Programming</button>
+                           <button className="p-2 border-2 font-medium cursor-pointer rounded-[6px]">History</button>
+                       </div>
+                </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-6 gap-5">
                 {

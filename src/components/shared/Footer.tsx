@@ -20,18 +20,18 @@ const Footer = () => {
                     <div className='mt-6'>
                         <div className='flex space-x-16'>
                             <div className='flex flex-col'>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Home</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Care</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Order</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Book Placement</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Digital Library</a>
+                                <a className=' flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Home</a>
+                                <a className=' flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Care</a>
+                                <a className=' flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Order</a>
+                                <a className=' flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Book Placement</a>
+                                <a className=' flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Digital Library</a>
                             </div>
                             <div className='flex flex-col'>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Help</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Contact</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Office</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Pathshala</a>
-                                <a className='font-medium flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span>Join With Us</a>
+                                <a className='flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Help</a>
+                                <a className='flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Contact</a>
+                                <a className='flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Office</a>
+                                <a className='flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span> Pathshala</a>
+                                <a className='flex  text-white' href=""><span className='mr-3'><ArrowRight className='text-[#fe3050]'></ArrowRight> </span>Join With Us</a>
                             </div>
                         </div>
                         <div className='flex mt-5 justify-between'>
