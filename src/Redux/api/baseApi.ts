@@ -15,9 +15,9 @@ export const baseApi=createApi({
          })
        }),
        
-       getProducts:builder.query({
-          query:()=>'/products'
-       }),
+       getProducts: builder.query({
+        query: (searchQuery) => `/products?search=${searchQuery || ''}`, 
+    }),
        getSingleProduct:builder.query({
         query:(id)=> `/products/${id}`
        }),
