@@ -5,13 +5,17 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 const AllProducts = () => {
     const [search, setSearch] = useState('')
+    const [a,setA]=useState(0)
+    const [cat,setCategory]=useState('')
     const [query, setQuery] = useState('');
     const { data, isLoading,refetch } = useGetProductsQuery(query)
+  
     if (isLoading) {
         return <>loading...</>
     }
     const handleSearch = () => {
         setQuery(search);
+        setA(0)
         setTimeout(() => {
             refetch();  
         }, 10);
@@ -37,17 +41,56 @@ const AllProducts = () => {
             <div className="my-8 mb-16">
                 <h1 className="text-[17px] font-medium text-center mb-5">See With Category</h1>
                 <div className="flex flex-wrap gap-5 p-3 justify-center">
-                    <button className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Drama</button>
-                    <button className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Poetry</button>
-                    <button className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Science</button>
-                    <button className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Programming</button>
-                    <button className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">History</button>
+                <button onClick={()=>{
+                        setA(0)
+                       
+                    }} className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">All</button>
+                    <button onClick={()=>{
+                        setA(1)
+                        setCategory('Drama')
+                    }} className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Drama</button>
+                    <button onClick={()=>{
+                        setA(1)
+                        setCategory('Poetry')
+                    }} className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Poetry</button>
+                    <button onClick={()=>{
+                        setA(1)
+                        setCategory('Science')
+                    }} className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Science</button>
+                    <button onClick={()=>{
+                        setA(1)
+                        setCategory('Programming')
+                    }} className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">Programming</button>
+                    <button onClick={()=>{
+                        setA(1)
+                        setCategory('History')
+                    }} className="p-2 border-2 w-[120px] font-medium cursor-pointer rounded-[6px]">History</button>
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-6 gap-5">
                 {
-                    data.data.map((item: any) => <div key={item._id} className="w-[320px] md:w-[245px]  mx-auto p-2 py-5 border-[1px] border-gray-400 min-h-[400px]">
+                    a!==0?(data.data.filter((item:any)=>item.category===cat).map((item: any) => <div key={item._id} className="w-[320px] md:w-[245px]  mx-auto p-2 py-5 border-[1px] border-gray-400 min-h-[400px]">
+                    <img src={item.image} className="w-[115px] mx-auto" alt="" />
+                    <div className="mt-4">
+                        <h1 className="text-center text-[17px]
+                                          font-medium">{item.book_name}</h1>
+                        <h1 className="text-center text-gray-400">{item.author}</h1>
+                        <h1 className="text-center text-gray-400">Type: {item.category}</h1>
+                        <div className="flex justify-center space-x-3.5 mt-4">
+                            <FaStar className="text-xl text-orange-300"></FaStar>
+                            <FaStar className="text-xl text-orange-300"></FaStar>
+                            <FaStar className="text-xl text-orange-300"></FaStar>
+                            <FaStar className="text-xl text-orange-300"></FaStar>
+                            <FaStar className="text-xl text-orange-300"></FaStar>
+                        </div>
+                        <NavLink to={`/details/${item._id}`}>
+                            <button className="w-full text-[17px] mt-5 font-medium text-white
+                                          bg-[#fe3050] h-[35px] cursor-pointer">Details</button></NavLink>
+                        <button className="w-full text-[17px] mt-5 font-medium text-white
+                                          bg-gray-700 h-[35px] cursor-pointer">Add To Cart</button>
+                    </div>
+                </div>)):(data.data.map((item: any) => <div key={item._id} className="w-[320px] md:w-[245px]  mx-auto p-2 py-5 border-[1px] border-gray-400 min-h-[400px]">
                         <img src={item.image} className="w-[115px] mx-auto" alt="" />
                         <div className="mt-4">
                             <h1 className="text-center text-[17px]
@@ -67,7 +110,7 @@ const AllProducts = () => {
                             <button className="w-full text-[17px] mt-5 font-medium text-white
                                               bg-gray-700 h-[35px] cursor-pointer">Add To Cart</button>
                         </div>
-                    </div>)
+                    </div>))
                 }
             </div>
         </div>
