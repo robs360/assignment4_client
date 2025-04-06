@@ -7,6 +7,7 @@ import AllProducts from "@/pages/All Products/AllProducts";
 import Details from "@/components/Details";
 import DashboardLayout from "@/DashbordComponent/DashboardLayout";
 import Information from "@/DashbordComponent/Information";
+import AllUser from "@/DashbordComponent/AllUser";
 
 const routes = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const routes = createBrowserRouter([
       {
         index:true,
         element:<Information></Information>
+      },
+      {
+        path:'all-user',
+        element:<AllUser></AllUser>
       }
     ]
   }

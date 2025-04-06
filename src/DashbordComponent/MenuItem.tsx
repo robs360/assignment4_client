@@ -7,6 +7,7 @@ interface MenuItemProps {
 }
 
 const MenuItem = ({ label, address, icon: Icon }: MenuItemProps) => {
+  
   return (
     <>
       <NavLink

@@ -5,7 +5,7 @@ import MenuItem from "./MenuItem";
 const AdminMenu = () => {
   return (
     <>
-      <MenuItem label="Dashboard" address="admin-dashboard" icon={FaUser} />
+      <MenuItem label="All Usere" address="all-user" icon={FaUser} />
       
     </>
   );
