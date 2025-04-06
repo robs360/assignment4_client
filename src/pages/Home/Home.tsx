@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom"
 
 const Home=()=>{
     const {data,isLoading}=useGetProductsQuery('as')
+    console.log(data)
     if(isLoading){
         return <>loading...</>
     }

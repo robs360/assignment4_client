@@ -5,35 +5,47 @@ import Login from "@/pages/Login/Login";
 import SignUp from "@/pages/SignUp/Signup";
 import AllProducts from "@/pages/All Products/AllProducts";
 import Details from "@/components/Details";
+import DashboardLayout from "@/DashbordComponent/DashboardLayout";
+import Information from "@/DashbordComponent/Information";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element:<App/>,
-    children:[
+    element: <App />,
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: '/login',
+        element: <Login></Login>
       },
       {
-        path:'/signup',
-        element:<SignUp></SignUp>
+        path: '/signup',
+        element: <SignUp></SignUp>
       },
       {
-        path:'/allproducts',
-        element:<AllProducts></AllProducts>
+        path: '/allproducts',
+        element: <AllProducts></AllProducts>
       },
       {
-        path:'/details/:id',
-        element:<Details></Details>
+        path: '/details/:id',
+        element: <Details></Details>
       }
     ]
-  }, 
- 
+
+  },
+  {
+    path:'/dashboard',
+    element:<DashboardLayout></DashboardLayout>,
+    children:[
+      {
+        index:true,
+        element:<Information></Information>
+      }
+    ]
+  }
 ]);
 
 export default routes;
